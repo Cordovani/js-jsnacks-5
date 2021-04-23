@@ -4,28 +4,29 @@
 // funzione per creare una zucchina
 function creaZucchina() {
     var zucchina = {
-        "peso": pesoRandZucchina(),
-        "varietà": varietàRandZucchina(),
-        "lunghezza": lunghRandZucchina()
+        "peso": pesoRandZucchina() + "gr",
+        "varietà": varietaRandZucchina(),
+        "lunghezza": lunghRandZucchina() + "cm"
     }
 
+    return zucchina;
 }
 // funzione peso random zucchina tra i 50g e i 400g
 function pesoRandZucchina() {
-    return (Math.random() * (500 - 4000) + 1).toFixed(1);
+    return (Math.random() * (400 - 50) + 1).toFixed(1);
 }
 
 // funzione lunghezza random zucchina tra i 7cm e i 28 cm
 function lunghRandZucchina() {
-    return (Math.random() * (70 - 280) + 1);
+    return (Math.random() * (28 - 7) + 1).toFixed(0);
 }
 // funzione varietà random zucchina
-function varietàRandZucchina() {
+function varietaRandZucchina() {
 
-    var varietàZucchine = ["Zucchina lunga fiorentina", "Zucchina romanesca", "Zucchino siciliano"];
-    var randomIndex = (Math.random() * 10).toFixed(0);
+    var varietaZucchine = ["Zucchina lunga fiorentina", "Zucchina romanesca", "Zucchino siciliano"];
+    var randomIndex = (Math.random() * (varietaZucchine.length - 1)).toFixed(0);
 
-    return varietàRandZucchina[randomIndex];
+    return varietaZucchine[randomIndex];
 
 }
 
@@ -37,14 +38,22 @@ var sommaPeso = 0;
 
 // creo 10 zucchine 
 for (var i = 0; i < 10; i++) {
-    zucchine = creaZucchina();
+    var nuovaZucchina = creaZucchina();
+
+    zucchine.push(nuovaZucchina);
 }
 
 // calcolo il peso delle zucchine
-for (var j = 0; j < zucchine.length(); j++){
-    sommaPeso += zucchine[j].peso;
+for (var j = 0; j < zucchine.length; j++) {
+
+    sommaPeso += parseInt(zucchine[j].peso);
 }
 
 // stampo l'output del programma
 console.log(zucchine);
-console.log(sommaPeso);
+console.log(sommaPeso + "gr");
+
+
+
+// var zucchina = creaZucchina();
+// console.log(zucchina);
