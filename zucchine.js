@@ -31,7 +31,6 @@ function varietaRandZucchina() {
 }
 
 
-
 // CORPO DEL PROGRAMMA
 var zucchine = [];
 var sommaPeso = 0;
