@@ -11,14 +11,16 @@ function creaZucchina() {
 
     return zucchina;
 }
+
 // funzione peso random zucchina tra i 50g e i 400g
 function pesoRandZucchina() {
-    return (Math.random() * (400 - 50) + 1).toFixed(1);
+    return Math.floor(Math.random() * (400 - 50) + 50);
 }
 
 // funzione lunghezza random zucchina tra i 7cm e i 28 cm
 function lunghRandZucchina() {
-    return (Math.random() * (28 - 7) + 1).toFixed(0);
+    return Math.floor(Math.random() * (28 - 7) + 7);
+}
 }
 // funzione varietà random zucchina
 function varietaRandZucchina() {

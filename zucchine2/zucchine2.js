@@ -98,8 +98,8 @@ for (var j = 0; j < zucchine.length; j++) {
 // stampo l'output del programma
 console.log(zucchineMinori15);
 console.log(zucchineMaggiori15);
-console.log("la somma delle zucchine con < di 15cm è di: " + sommaPeso.toFixed(2) + " gr");
-console.log("la somma delle zucchine con >= di 15cm è di: " + pesoMaggiori15.toFixed(2) + " gr");
+console.log("la somma delle zucchine con lunghezza < di 15cm è di: " + sommaPeso.toFixed(2) + " gr");
+console.log("la somma delle zucchine con lunghezza > o = di 15cm è di: " + pesoMaggiori15.toFixed(2) + " gr");
 
 
 // Dividi in due array separati le zucchine che misurano meno o più di 15cm.
